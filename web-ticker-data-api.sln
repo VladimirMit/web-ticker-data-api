@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cognizant.TickerDataApp.Api", "Cognizant.TickerDataApp.Api\Cognizant.TickerDataApp.Api.csproj", "{8FC8C508-A21B-4447-9DF7-2D9C1796F17F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cognizant.TickerDataApp.Domain", "Cognizant.TickerDataApp.Domain\Cognizant.TickerDataApp.Domain.csproj", "{5C03CFE9-B8A8-42C6-93A9-A1A6B2438AE0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cognizant.TickerDataApp.Application", "Cognizant.TickerDataApp.Application\Cognizant.TickerDataApp.Application.csproj", "{423CE61E-DFEE-4365-B3A7-A347E2F16250}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cognizant.TickerDataApp.Database", "Cognizant.TickerDataApp.Database\Cognizant.TickerDataApp.Database.csproj", "{E11431A9-CCC4-4A22-B9CD-41507AE8EA50}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3089776D-F041-4A07-AD54-91CBDCA00A26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cognizant.TickerDataApp.Tests", "Cognizant.TickerDataApp.Tests\Cognizant.TickerDataApp.Tests.csproj", "{D5149E90-C168-4F6A-8676-18B61EA0F6CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cognizant.TickerDataApp.GoogleSheetsSource", "Cognizant.TickerDataApp.GoogleSheetsSource\Cognizant.TickerDataApp.GoogleSheetsSource.csproj", "{AD28171B-9F27-49CF-A0ED-02FEF7050ADD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FC8C508-A21B-4447-9DF7-2D9C1796F17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC8C508-A21B-4447-9DF7-2D9C1796F17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC8C508-A21B-4447-9DF7-2D9C1796F17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC8C508-A21B-4447-9DF7-2D9C1796F17F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C03CFE9-B8A8-42C6-93A9-A1A6B2438AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C03CFE9-B8A8-42C6-93A9-A1A6B2438AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C03CFE9-B8A8-42C6-93A9-A1A6B2438AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C03CFE9-B8A8-42C6-93A9-A1A6B2438AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423CE61E-DFEE-4365-B3A7-A347E2F16250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423CE61E-DFEE-4365-B3A7-A347E2F16250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423CE61E-DFEE-4365-B3A7-A347E2F16250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423CE61E-DFEE-4365-B3A7-A347E2F16250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E11431A9-CCC4-4A22-B9CD-41507AE8EA50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11431A9-CCC4-4A22-B9CD-41507AE8EA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11431A9-CCC4-4A22-B9CD-41507AE8EA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11431A9-CCC4-4A22-B9CD-41507AE8EA50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3089776D-F041-4A07-AD54-91CBDCA00A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3089776D-F041-4A07-AD54-91CBDCA00A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3089776D-F041-4A07-AD54-91CBDCA00A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3089776D-F041-4A07-AD54-91CBDCA00A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5149E90-C168-4F6A-8676-18B61EA0F6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5149E90-C168-4F6A-8676-18B61EA0F6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5149E90-C168-4F6A-8676-18B61EA0F6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5149E90-C168-4F6A-8676-18B61EA0F6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD28171B-9F27-49CF-A0ED-02FEF7050ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD28171B-9F27-49CF-A0ED-02FEF7050ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD28171B-9F27-49CF-A0ED-02FEF7050ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD28171B-9F27-49CF-A0ED-02FEF7050ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B46B8723-A594-4095-88DC-D5F5A2B56DF8}
+	EndGlobalSection
+EndGlobal

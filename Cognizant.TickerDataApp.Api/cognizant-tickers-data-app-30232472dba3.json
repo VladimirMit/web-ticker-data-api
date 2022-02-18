@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cognizant-tickers-data-app",
+  "private_key_id": "30232472dba379f1c3414d8c5d78daf60c08dd54",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDPlVm+kzEHoDDl\nNhDt2qnLsAvV3XtPbcoYMzbi4lNkQJcD0WLkbFvFJxwpFGoFH/CjEdPNfPVPM5EO\n62tOYeeUOzWrxckSE5rZxZAtLJH5hEFjyIF12qhKDlC+aQyQX9m7QlIPIrsfsHKT\nPkkSvpZr0Z66aAzg/HgBuMmgChIFjvMohwk8sLOVxw88nFRzBUhmBouXtAcjL3MO\ncpmVlmpXtJ21nJqsJkgaBujySUGguUXJZ8+yVYOaoNMDWTJ/fgh3Cm4npLbjl0qV\n7J2zlz4L9yuKoJwPDEzIO2PdhZilx5gdbQifojmTjRGi67bH51LC1qsrQz4YUBvp\nveV57YaLAgMBAAECggEAElE0fRuR7QFWrzMpJUPxTbb4JGQJ2IVwmtgSFM0x3JvS\nd5THbC6fnnMIChvyCwe5fTo6fVx0bQu41h8x9dWv0KW047ZtOroeJO9I/KN9Mg5Y\nksyDl/m2depzd4nfgPHkTaDZitpetrokMhgB7LSCo3r4zawWzteYY1aB/CxHUNQW\ne5+bQT8wxyXe1F86UkMPFibJO39NdQfu4TSn341POK2Nh4m4FdMW61cey5bWiYkk\nLEVjw50gxxAIXsa3+R8+/8l09PsrQgTBFjf+Km/Mmo1M2NQ7ku9aUhwRf5RwNT0h\ntVc9KdPMZ1v63XZWsLkO+RWXRhvU+966lr75MnLwGQKBgQD/vwgu8saZzj5fUEs7\nPQay7ogkUp+7w1qQ6RrTWFBIW35QgGfJbTWOOVNjrHk4KFupeM4I3FJ1YodyCAaD\nYRpx+v28DPHZO6HwIJIc37rxMGgQZhm/9DdRX3RbZFQgVIxUJrR+i4PP8jcU2/70\nDlL19sCPfJzKZ45oErhpG47XxwKBgQDPyhVplvb7Q5ZpQtuJfxBGhzbk45QCOrfN\nsCSCR33gNDiBe+QLp7bV1fyZvLtbv0v18Esn3t7IceB5x7PzhPKRK8WoTT8vDllZ\ncQMDZfIIq30SSI6iD/1XxoTqHxEp+lGq0ih4UwZdcxp7UZtB0JDKTyNUDFw1/peK\nExFaIYpDHQKBgBgayEmshj1+6/AN4FlgAh6hTuGli/qliga4gdfDriVzwi8SOzYH\n/hE+o/Z0DiTV4PXTNhAtu/Pman+78+k0IMr3bizoR29DKJs6ZqskBzmuZ1CMXwbx\nnLkltxDaHvfBIEzaLQ70VWMnIDvuFFSqePVH4ZRkmV6WbhyvDwSRHWCHAoGAWKLn\nh2cya/Rk0PoIFBrzomJDdFfv5xONHFyq9jfw5hbgk7t5h88/GvBxFFOByJ1Nldeu\n948GkZKiItChXpuzrWFyq1xoO3ZvfsvKcUSnfjNI4ue4kEEp3Kt+PzCJbdKty6Ri\nRxGDgZF8Fma1R9nkKaigdVXgb9fuZKPFnyD3jbECgYAdjYD7HiuR5Q1n8w6skDS9\nN8kzp9ppepBl3eIJuk6uFknpzKEl8VefvpSRKhu2o5RJFhM5ysvi6YTXHqimI3px\nxR03REv0pxSr652V/yD6OjNxraHM5NdJcBFNvJenmREOv9JKjjxZjr+0+oNckV+p\nwnFbLVN1PESXgu8b0IIMHA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sheets@cognizant-tickers-data-app.iam.gserviceaccount.com",
+  "client_id": "114816255515953035491",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sheets%40cognizant-tickers-data-app.iam.gserviceaccount.com"
+}

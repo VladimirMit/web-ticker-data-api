@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+
+
+  cognizant.tickerdataapp.api:
+    image: ${DOCKER_REGISTRY-}cognizanttickerdataappapi
+    build:
+      context: .
+      dockerfile: Cognizant.TickerDataApp.Api/Dockerfile
+    ports:
+        - 80:80
+    environment:
+      StoreSettings__ConnectionString: mongodb://mongo:27017
+    depends_on:
+      - mongo

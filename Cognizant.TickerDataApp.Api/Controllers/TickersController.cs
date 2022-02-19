@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
+using Cognizant.TickerDataApp.Api.Models;
 using Cognizant.TickerDataApp.Application.Features.Tickers;
 using Cognizant.TickerDataApp.Domain.Entities;
 using MediatR;
@@ -39,7 +40,18 @@ namespace Cognizant.TickerDataApp.Api.Controllers
         {
             var tickers = await _mediator.Send(new GetAll.Request(), cancellationToken);
 
-            return tickers.Select(t => new TickerShortDto(t.Id, t.Code)).ToList();
-        } 
+            return tickers.Select(t =>
+                    new TickerShortDto(t.Id, t.Code, t.HistoryRecords.Min(r => r.Date),
+                        t.HistoryRecords.Max(r => r.Date)))
+                .ToList();
+        }
+
+        [HttpPost]
+        public async Task<Ticker> Post([FromBody]CreateTicker.Request request)
+        {
+            var ticker = await _mediator.Send(request);
+
+            return ticker;
+        }
     }
 }

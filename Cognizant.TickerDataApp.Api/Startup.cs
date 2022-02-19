@@ -4,6 +4,7 @@ using Cognizant.TickerDataApp.Database;
 using Cognizant.TickerDataApp.Database.Repositories;
 using Cognizant.TickerDataApp.Domain.Repositories;
 using Cognizant.TickerDataApp.GoogleSheetsSource;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,8 +29,10 @@ namespace Cognizant.TickerDataApp.Api
 
             services.AddControllers();
             services.Configure<StoreSettings>(Configuration.GetSection(nameof(StoreSettings)));
+            services.Configure<GoogleApiAuthSettings>(Configuration.GetSection(nameof(GoogleApiAuthSettings)));
             services.AddTransient<ITickersRepository, TickersRepository>();
             services.AddTransient<ITickersSourceService, GoogleSheetsTickersSource>();
+            services.AddValidatorsFromAssembly(typeof(GetAll.Request).Assembly);
             services.AddMediatR(typeof(GetAll.Request));
             services.AddSwaggerGen(c =>
             {

@@ -13,7 +13,7 @@ using NUnit.Framework;
 namespace Cognizant.TickerDataApp.Tests.Application.Tickers
 {
     [TestFixture]
-    class GetAllTests
+    internal class GetAllTests
     {
         [Test]
         public async Task ShouldReturnAll()

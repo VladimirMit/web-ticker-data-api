@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Cognizant.TickerDataApp.Application.Services;
 using Cognizant.TickerDataApp.Domain.Entities;
 using Cognizant.TickerDataApp.Domain.Repositories;
 using MediatR;

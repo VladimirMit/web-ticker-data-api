@@ -11,7 +11,7 @@ using NUnit.Framework;
 namespace Cognizant.TickerDataApp.Tests.Application.Tickers
 {
     [TestFixture]
-    class GetByIdTests
+    internal class GetByIdTests
     {
         [Test]
         public async Task WhenExist_ShouldReturnExpectedResult()

@@ -35,20 +35,23 @@ namespace Cognizant.TickerDataApp.GoogleSheetsSource
         }
         public async Task<ICollection<HistoryRecord>> GetTickerInfo(string tickerName, DateTime dateFrom, DateTime dateTo, CancellationToken cancellationToken)
         {
-            var sheetName = await CreateSheet(tickerName, dateFrom, dateTo, cancellationToken);
+            var (sheetName, sheetId) = await CreateSheet(tickerName, dateFrom, dateTo, cancellationToken);
             
             await Calculate(tickerName, dateFrom, dateTo, sheetName, cancellationToken);
 
             var historyRecords = await ReadCalculatedData(sheetName, dateFrom, dateTo, cancellationToken);
 
-            await DeleteSheet(sheetName, cancellationToken);
+            await DeleteSheet(sheetId, cancellationToken);
             
             return historyRecords;
         }
 
-        private Task DeleteSheet(string sheetName, CancellationToken cancellationToken)
+        private Task DeleteSheet(int sheetId, CancellationToken cancellationToken)
         {
-            var deleteSheetRequest = new DeleteSheetRequest();
+            var deleteSheetRequest = new DeleteSheetRequest
+            {
+                SheetId = sheetId
+            };
 
             var batchUpdateSpreadsheetRequest = new BatchUpdateSpreadsheetRequest
             {
@@ -87,7 +90,7 @@ namespace Cognizant.TickerDataApp.GoogleSheetsSource
             var response = await request.ExecuteAsync(cancellationToken);
         }
 
-        private async Task<string> CreateSheet(string tickerName, DateTime dateFrom, DateTime dateTo,
+        private async Task<(string, int)> CreateSheet(string tickerName, DateTime dateFrom, DateTime dateTo,
             CancellationToken cancellationToken)
         {
             var addSheetRequest = new AddSheetRequest
@@ -108,7 +111,7 @@ namespace Cognizant.TickerDataApp.GoogleSheetsSource
 
             var response = await request.ExecuteAsync(cancellationToken);
 
-            return addSheetRequest.Properties.Title;
+            return (addSheetRequest.Properties.Title, response.Replies.First().AddSheet.Properties.SheetId.Value);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -72,7 +73,7 @@ namespace Cognizant.TickerDataApp.GoogleSheetsSource
 
             var response = await request.ExecuteAsync(cancellationToken);
 
-            return response.Values.Select(v => new HistoryRecord(DateTime.Parse(v[0].ToString()), decimal.Parse(v[1].ToString()))).ToList();
+            return response.Values.Select(v => new HistoryRecord(DateTime.Parse(v[0].ToString(), CultureInfo.InvariantCulture), decimal.Parse(v[1].ToString(), CultureInfo.InvariantCulture))).ToList();
         }
 
         private async Task Calculate(string tickerName, DateTime dateFrom, DateTime dateTo, string sheetName, CancellationToken cancellationToken)
@@ -97,7 +98,7 @@ namespace Cognizant.TickerDataApp.GoogleSheetsSource
             {
                 Properties = new SheetProperties
                 {
-                    Title = $"{tickerName}-{dateFrom.ToShortDateString()}-{dateTo.ToShortDateString()}"
+                    Title = $"{tickerName}-{dateFrom.ToString(CultureInfo.InvariantCulture.DateTimeFormat.ShortDatePattern)}-{dateTo.ToString(CultureInfo.InvariantCulture.DateTimeFormat.ShortDatePattern)}"
                 }
             };
 

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Company.TickerDataApp.Domain\Company.TickerDataApp.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

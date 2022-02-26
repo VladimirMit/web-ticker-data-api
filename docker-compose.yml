@@ -8,11 +8,11 @@ services:
       - 27017:27017
 
 
-  cognizant.tickerdataapp.api:
-    image: ${DOCKER_REGISTRY-}cognizanttickerdataappapi
+  company.tickerdataapp.api:
+    image: ${DOCKER_REGISTRY-}companytickerdataappapi
     build:
       context: .
-      dockerfile: Cognizant.TickerDataApp.Api/Dockerfile
+      dockerfile: Company.TickerDataApp.Api/Dockerfile
     ports:
         - 80:80
     environment:

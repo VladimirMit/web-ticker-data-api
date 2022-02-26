@@ -6,7 +6,7 @@
     <ProjectGuid>3089776d-f041-4a07-ad54-91cbdca00a26</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>cognizant.tickerdataapp.api</DockerServiceName>
+    <DockerServiceName>company.tickerdataapp.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

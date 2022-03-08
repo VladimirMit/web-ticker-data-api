@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tickerdataappapi-deployment
+spec:
+  selector:
+    matchLabels:
+      app: tickerdataappapi
+  template:
+    metadata:
+      labels:
+        app: tickerdataappapi
+    spec:
+      containers:
+        - name: tickerdataappapi
+          image: tickeracr.azurecr.io/companytickerdataappapi:v1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: StoreSettings__ConnectionString
+              valueFrom:
+                configMapKeyRef:
+                  name: mongo-configmap
+                  key: connection_string
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+          - containerPort: 80
+      imagePullSecrets:
+        - name: acr-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tickerdataappapi-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: tickerdataappapi
+  ports:
+  - protocol: TCP
+    port: 80

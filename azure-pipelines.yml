@@ -13,7 +13,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'a862620d-1f82-47d7-8504-e671041afbaf'
-  imageRepository: 'vladimirmitwebtickerdataapi'
+  imageRepository: 'companytickerdataappapi'
   containerRegistry: 'tickeracr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Company.TickerDataApp.Api/Dockerfile'
   context: '.'

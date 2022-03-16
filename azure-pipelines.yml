@@ -18,6 +18,7 @@ variables:
   dockerfilePath: '$(Build.SourcesDirectory)/Company.TickerDataApp.Api/Dockerfile'
   context: '.'
   tag: '$(Build.BuildId)'
+  imagePullSecret: 'tickeracr1835450a-auth'
 
   # Agent VM image name
   #vmImageName: 'ubuntu-latest'

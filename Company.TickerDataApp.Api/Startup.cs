@@ -38,6 +38,7 @@ namespace Company.TickerDataApp.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "TickerDataApp", Version = "v1"});
             });
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +54,13 @@ namespace Company.TickerDataApp.Api
             app.UseRouting();
 
             // app.UseAuthorization();
-
+            app.UseCors(options =>
+            {
+                options.AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .WithOrigins(Configuration.GetSection("AllowedOrigins").Value.Split(';'));
+            });
+            
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }

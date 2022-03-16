@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: tickerdataappapi-deployment
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: tickerdataappapi
@@ -13,8 +14,7 @@ spec:
     spec:
       containers:
         - name: tickerdataappapi
-          image: tickeracr.azurecr.io/companytickerdataappapi:v1
-          imagePullPolicy: IfNotPresent
+          image: tickeracr.azurecr.io/companytickerdataappapi:v9
           env:
             - name: StoreSettings__ConnectionString
               valueFrom:
@@ -24,7 +24,7 @@ spec:
           resources:
             limits:
               memory: "128Mi"
-              cpu: "500m"
+              cpu: "250m"
           ports:
           - containerPort: 80
       imagePullSecrets:

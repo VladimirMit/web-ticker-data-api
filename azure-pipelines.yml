@@ -72,7 +72,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/aks/tickerdataappapi.yml
+                $(Build.SourcesDirectory)/aks/tickerdataappapi.yml
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |
